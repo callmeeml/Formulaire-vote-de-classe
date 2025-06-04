@@ -1,0 +1,185 @@
+/* Import de la police Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap');
+
+body, .accueil-bg {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(120deg, #f7971e 0%, #ffd200 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Accueil */
+.accueil-container {
+    max-width: 500px;
+    margin: 120px auto 0 auto;
+    background: rgba(255,255,255,0.95);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(34, 34, 59, 0.18);
+    padding: 50px 40px 40px 40px;
+    text-align: center;
+    animation: fadeIn 1.2s;
+}
+
+.accueil-title {
+    font-size: 2.7em;
+    color: #22223b;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.accueil-desc {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+/* Formulaire */
+.form-title {
+    text-align: center;
+    margin-top: 40px;
+    color: #22223b;
+    letter-spacing: 2px;
+    font-size: 2.3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px #ffe08244;
+}
+
+form {
+    background: rgba(255,255,255,0.97);
+    max-width: 650px;
+    margin: 30px auto 0 auto;
+    padding: 35px 45px 25px 45px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(34, 34, 59, 0.13);
+    border: 1px solid #ffe082;
+    animation: fadeIn 1.2s;
+}
+
+.categorie {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #22223b;
+    letter-spacing: 1px;
+    font-size: 1.08em;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 11px 13px;
+    border-radius: 7px;
+    border: 1.5px solid #ffd200;
+    background: #fffbe7;
+    font-size: 15px;
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+    margin-top: 2px;
+    box-shadow: 0 1px 4px #ffd20022;
+}
+
+input[type="text"]:focus {
+    border: 1.5px solid #f7971e;
+    background: #fffde4;
+    box-shadow: 0 2px 8px #ffd20044;
+}
+
+/* Boutons animés */
+.btn-entrer, .btn-voter, .btn-retour {
+    display: inline-block;
+    background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+    color: #22223b;
+    border: none;
+    padding: 15px 38px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 18px;
+    box-shadow: 0 2px 8px #ffd20044;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+}
+
+.btn-entrer::after, .btn-voter::after, .btn-retour::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.3);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s cubic-bezier(.4,2,.6,.4), height 0.4s cubic-bezier(.4,2,.6,.4);
+    z-index: 0;
+}
+
+.btn-entrer:hover, .btn-voter:hover, .btn-retour:hover {
+    background: linear-gradient(90deg, #ffd200 0%, #f7971e 100%);
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 6px 24px #ffd20055;
+}
+
+.btn-entrer:hover::after, .btn-voter:hover::after, .btn-retour:hover::after {
+    width: 250%;
+    height: 400%;
+}
+
+.btn-entrer, .btn-voter, .btn-retour {
+    z-index: 1;
+}
+
+.btn-entrer span, .btn-voter span, .btn-retour span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Message de confirmation */
+#confirmation {
+    text-align: center;
+    margin-top: 50px;
+    color: #22223b;
+    font-size: 1.3em;
+    background: rgba(255,255,255,0.97);
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 35px 0 30px 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px #ffd20033;
+    animation: fadeIn 1.2s;
+}
+
+.merci-title {
+    color: #f7971e;
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #ffd20044;
+}
+
+.merci-desc {
+    color: #444;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
